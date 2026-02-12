@@ -1,14 +1,14 @@
 <template>
   <v-app-bar app color="primary" dark>
-    <v-toolbar-title>{{ $t('navbar.home') }}</v-toolbar-title>
+    <v-toolbar-title>{{ $t('saludo') }}</v-toolbar-title>
 
     <v-spacer />
 
-    <v-btn icon @click="toggleTheme">
+    <v-btn icon @click="toggle">
       <v-icon>mdi-theme-light-dark</v-icon>
     </v-btn>
 
-    <v-btn icon @click="toggleLang">
+    <v-btn icon @click="changeLang()">
       <v-icon>mdi-translate</v-icon>
     </v-btn>
 
@@ -23,14 +23,25 @@ import { RouterLink } from 'vue-router'
 import { useSettingsStore } from '@/stores/settings'
 import { useI18n } from 'vue-i18n'
 import { useThemeSwitcher } from '@/composables/useThemeSwitcher'
+import { watch } from 'vue'
 
-const { toggleTheme, currentTheme } = useThemeSwitcher()
-const store = useSettingsStore()
-const { t } = useI18n()
+const settings = useSettingsStore()
+const { toggle, currentTheme } = useThemeSwitcher()
+
+const { t , locale } = useI18n()
 
 
-function toggleLang() {
-  locale.value = locale.value === 'es' ? 'en' : 'es'
-  settings.setLang(locale.value)
+// Sincroniza store → i18n
+watch(
+  () => settings.locale,
+  (newLang) => {
+    locale.value = newLang
+  },
+  { immediate: true }
+)
+const changeLang = ()=> {
+  settings.toggleLang()  
+  locale.value = settings.locale
 }
+
 </script>
