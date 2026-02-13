@@ -12,5 +12,17 @@ export default {
   "toggleLang": "Cambiar a Español",
   "role": "Frontend Developer & Fullstack Engineer",
   "years": "years of experience",
-  "focus": "Building scalable and maintainable applications"
+  "focus": "Building scalable and maintainable applications",
+  "close": "Close",  
+  "primaryRole": "Frontend Developer specialized in scalable architecture",
+  "adaptability": "Ability to adapt to required language and stack",
+  "focus1": "Performance, optimization and maintainability",
+  "healthSector": "Healthcare Sector — Career Start",
+  "exp1": "Started as frontend developer in 2018. Clinical systems development, Laravel implementation, direct interaction with end users. Level 2 & 3 support.",
+  "securitySector": "Security & Computer Vision Sector",
+  "exp2": "Frontend with Vue, gradual transition to Node.js backend. Client support and Docker-based deployments.",
+  "healthReturn": "Return to Healthcare Sector",
+  "exp3": "Vue 2 frontend and Node.js backend support. Growth into backend and DevOps with Docker deployments and technical support.",
+  "currentCompany": "Current Company — Education Sector",
+  "exp4": "Frontend with React across multiple educational projects, maintaining quality standards, optimization and modular architecture.",
 }
