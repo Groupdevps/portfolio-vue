@@ -6,8 +6,8 @@ export default {
     "contact": "Contact"
   },
   saludo: 'Hi, I’m Dan 👋',
-    contacto: 'Contact',
-    proyectos: 'Projects',
+  contacto: 'Contact',
+  proyectos: 'Projects',
   "toggleDark": "Toggle Dark Mode",
   "toggleLang": "Cambiar a Español",
   "role": "Frontend Developer & Fullstack Engineer",

@@ -5,9 +5,9 @@ export default {
     "about": "Sobre mí",
     "contact": "Contacto"
   },
-   saludo: 'Hola, soy Dan 👋',
-    contacto: 'Contacto',
-    proyectos: 'Proyectos',
+  saludo: 'Hola, soy Dan 👋',
+  contacto: 'Contacto',
+  proyectos: 'Proyectos',
   "toggleDark": "Cambiar tema",
   "toggleLang": "Switch to English",
   "role": "Frontend Developer & Fullstack Engineer",

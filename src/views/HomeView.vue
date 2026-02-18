@@ -32,7 +32,7 @@
             }
           </pre>
 
-          <v-row class="mt-6" justify="space-betwr" align="center" gap="16">
+          <v-row class="mt-6" justify="space-between" align="center" gap="16">
             <v-btn
               color="primary"
               variant="flat"

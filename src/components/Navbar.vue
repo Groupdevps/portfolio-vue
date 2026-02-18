@@ -26,7 +26,7 @@ import { useThemeSwitcher } from '@/composables/useThemeSwitcher'
 import { watch } from 'vue'
 
 const settings = useSettingsStore()
-const { toggle, currentTheme } = useThemeSwitcher()
+const { toggle } = useThemeSwitcher()
 
 const { t , locale } = useI18n()
 
