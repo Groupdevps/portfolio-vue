@@ -4,7 +4,7 @@ import { watch } from 'vue'
 
 
 export const useSettingsStore = defineStore('settings', () => {
-  const darkTheme = ref(false)
+  const darkTheme = ref(true)
   const locale = ref('es')
 
   const savedLang = localStorage.getItem('lang')

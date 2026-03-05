@@ -3,8 +3,8 @@
 
     <!-- Header tipo código -->
     <div class="section-title">
-      <span class="keyword">export</span>
-      <span class="keyword">const</span>
+      <span class="keyword mr-2">export</span>
+      <span class="keyword mr-2">const</span>
       <span class="variable">profile</span>
       =
       {
@@ -36,7 +36,7 @@
 
     <!-- Timeline -->
     <div class="section-title mt-12">
-      <span class="keyword">const</span>
+      <span class="keyword mr-2">const</span>
       <span class="variable">timeline</span>
       =
       [
@@ -101,35 +101,36 @@ const { t } = useI18n()
 .section-title {
   font-family: "Fira Code", monospace;
   font-size: 1.2rem;
-  color: #82aaff;
+  color: rgb(var(--v-theme-primary));
 }
 
 .code-card,
 .timeline-card {
-  background-color: #0f172a;
+  background-color: rgb(var(--v-theme-surface));
+  border: 1px solid rgb(var(--v-theme-surface-variant));
   border-radius: 16px;
 }
 
 .code-block {
   font-family: "Fira Code", monospace;
   font-size: 0.9rem;
-  color: #e2e8f0;
+  color: rgb(var(--v-theme-on-surface));
   white-space: pre-wrap;
 }
 
 .keyword {
-  color: #c792ea;
+  color: rgb(var(--v-theme-primary));
 }
 
 .variable {
-  color: #82aaff;
+  color: rgb(var(--v-theme-secondary));
 }
 
 .property {
-  color: #ffcb6b;
+  color: rgb(var(--v-theme-tertiary, 255, 203, 107));
 }
 
 .string {
-  color: #c3e88d;
+  color: rgb(var(--v-theme-tertiary, 195, 232, 141));
 }
 </style>

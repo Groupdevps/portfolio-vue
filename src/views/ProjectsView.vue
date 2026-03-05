@@ -3,8 +3,8 @@
 
     <!-- Título tipo código -->
     <div class="section-title">
-      <span class="keyword">export</span>
-      <span class="keyword">const</span>
+      <span class="keyword mr-2">export</span>
+      <span class="keyword mr-2">const</span>
       <span class="variable">projects</span>
       =
       [
@@ -56,7 +56,7 @@
 
     </v-row>
 
-    <div class="section-title mt-6">]</div>
+    <div class="section-title mt-12">]</div>
 
     <!-- Modal -->
     <v-dialog v-model="dialog" max-width="800">
@@ -154,45 +154,48 @@ const projects = ref([
 .section-title {
   font-family: "Fira Code", monospace;
   font-size: 1.2rem;
-  color: #82aaff;
+  color: rgb(var(--v-theme-primary));
 }
 
 .project-card {
-  background-color: #0f172a;
+  background-color: rgb(var(--v-theme-surface));
+  border: 1px solid rgb(var(--v-theme-surface-variant));
   border-radius: 16px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .modal-card {
-  background-color: #0f172a;
+  background-color: rgb(var(--v-theme-surface));
+  border: 1px solid rgb(var(--v-theme-surface-variant));
 }
 
 .code-block {
   font-family: "Fira Code", monospace;
   font-size: 0.9rem;
-  color: #e2e8f0;
+  color: rgb(var(--v-theme-on-surface));
   white-space: pre-wrap;
 }
 
 .keyword {
-  color: #c792ea;
+  color: rgb(var(--v-theme-primary));
 }
 
 .variable {
-  color: #82aaff;
+  color: rgb(var(--v-theme-secondary));
 }
 
 .property {
-  color: #ffcb6b;
+  color: rgb(var(--v-theme-tertiary, 255, 203, 107));
 }
 
 .string {
-  color: #c3e88d;
+  color: rgb(var(--v-theme-tertiary, 195, 232, 141));
 }
 
 .impact {

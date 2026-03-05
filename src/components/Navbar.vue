@@ -1,20 +1,17 @@
 <template>
-  <v-app-bar app color="primary" dark>
-    <v-toolbar-title>{{ $t('saludo') }}</v-toolbar-title>
-
+  <v-app-bar app elevation="0" class="transparent-navbar">
     <v-spacer />
 
-    <v-btn icon @click="toggle">
-      <v-icon>mdi-theme-light-dark</v-icon>
-    </v-btn>
+    <div class="navbar-controls">
+      <v-btn icon @click="toggle" class="navbar-btn">
+        <v-icon>mdi-theme-light-dark</v-icon>
+      </v-btn>
 
-    <v-btn icon @click="changeLang()">
-      <v-icon>mdi-translate</v-icon>
-    </v-btn>
-
-    <v-btn text to="/" exact>Inicio</v-btn>
-    <v-btn text to="/proyectos">Proyectos</v-btn>
-    <v-btn text to="/sobre-mi">Sobre mí</v-btn>
+      <v-btn icon @click="changeLang()" class="navbar-btn">
+        <v-icon>mdi-translate</v-icon>
+      </v-btn>
+    </div>
+    
   </v-app-bar>
 </template>
 
@@ -45,3 +42,28 @@ const changeLang = ()=> {
 }
 
 </script>
+
+<style scoped>
+.transparent-navbar {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.navbar-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navbar-btn {
+  color: rgb(var(--v-theme-on-background)) !important;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-btn:hover {
+  opacity: 1;
+  background-color: rgb(var(--v-theme-surface-variant)) !important;
+}
+</style>

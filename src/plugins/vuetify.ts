@@ -32,7 +32,7 @@ export default createVuetify({
     sets: { mdi },
   },
   theme: {
-    defaultTheme: 'light',
+    defaultTheme: 'dark',
     themes: {
       light: {
         dark: false,
@@ -40,6 +40,9 @@ export default createVuetify({
           primary: '#1976D2',
           secondary: '#424242',
           background: '#FFFFFF',
+          surface: '#F5F5F5',
+          'on-background': '#1C1B1F',
+          'on-surface': '#1C1B1F',
         },
       },
       dark: {
@@ -47,7 +50,10 @@ export default createVuetify({
         colors: {
           primary: '#90CAF9',
           secondary: '#EEEEEE',
-          background: '#121212',
+          background: '#0F172A',
+          surface: '#1E293B',
+          'on-background': '#E2E8F0',
+          'on-surface': '#E2E8F0',
         },
       },
     },
