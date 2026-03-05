@@ -1,5 +1,4 @@
 name: Deploy Vue (pnpm) to GitHub Pages
-
 on:
   push:
     branches: [main]
