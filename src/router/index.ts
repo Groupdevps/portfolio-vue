@@ -18,7 +18,7 @@ const routes: RouteRecordRaw[] = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/portfolio-vue/'),
   routes,
 })
 
