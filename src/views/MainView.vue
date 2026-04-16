@@ -58,6 +58,7 @@
               color="primary"
               :href="linkedin"
               target="_blank"
+              class="mx-3"
             >
               <v-icon>mdi-linkedin</v-icon>
             </v-btn>
@@ -76,6 +77,7 @@
 
     <!-- Contenido Principal (Derecha) -->
     <div class="content-container">
+      <ProfileView />
       <!-- Projects View -->
       <ProjectsView />
 
@@ -87,6 +89,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import ProfileView from './ProfileView.vue'
 import ProjectsView from './ProjectsView.vue'
 import AboutView from './AboutView.vue'
 import avatar from '@/assets/avatar.png'

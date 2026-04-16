@@ -5,7 +5,7 @@
     <div class="section-title">
       <span class="keyword mr-2">export</span>
       <span class="keyword mr-2">const</span>
-      <span class="variable">projects</span>
+      <span class="variable">{{t('projects')}}</span>
       =
       [
     </div>
@@ -24,11 +24,11 @@
           @click="openProject(project)"
         >
           <v-card-title class="text-h6">
-            {{ project.title }}
+            {{ t(project.title) }}
           </v-card-title>
 
           <v-card-subtitle>
-            {{ project.category }}
+            {{ t(project.category) }}
           </v-card-subtitle>
 
           <v-card-text>
@@ -41,13 +41,13 @@
               class="ma-1"
               variant="outlined"
             >
-              {{ tech }}
+              {{ t(tech) }}
             </v-chip>
 
             <!-- Impacto -->
             <div class="impact mt-4">
-              <span class="property">impact:</span>
-              <span class="string">{{ project.impact }}</span>
+              <span class="property">{{t('impact')}}: </span>
+              <span class="string">{{ t(project.impact) }}</span>
             </div>
 
           </v-card-text>
@@ -62,18 +62,18 @@
     <v-dialog v-model="dialog" max-width="800">
       <v-card class="modal-card">
         <v-card-title>
-          {{ selected?.title }}
+          {{ t(selected?.title) }}
         </v-card-title>
 
         <v-card-text>
 
           <pre class="code-block">
-{
-  <span class="property">description</span>: "<span class="string">{{ selected?.description }}</span>",
-  <span class="property">role</span>: "<span class="string">{{ selected?.role }}</span>",
-  <span class="property">stack</span>: [{{ selected?.stack.join(', ') }}],
-  <span class="property">impact</span>: "<span class="string">{{ selected?.impact }}</span>"
-}
+            {
+              <span class="property">description</span>: "<span class="string">{{ t(selected?.description) }}</span>",
+              <span class="property">role</span>: "<span class="string">{{ t(selected?.role) }}</span>",
+              <span class="property">stack</span>: [{{ selected?.stack.join(', ') }}],
+              <span class="property">impact</span>: "<span class="string">{{ t(selected?.impact) }}</span>"
+            }
           </pre>
 
           <!-- Video opcional -->
@@ -119,34 +119,46 @@ function openProject(project: any) {
 const projects = ref([
   {
     id: 1,
-    title: 'Clinical Management System',
-    category: 'Professional',
-    description: 'Enterprise clinical management platform.',
-    role: 'Frontend Lead',
+    title: 'title1',
+    category: 'category1',
+    description: 'description1',
+    role: 'role1',
     stack: ['Vue', 'Node', 'Docker'],
-    impact: 'Reduced load time by 40% and improved UX flow.',
+    impact: 'impact1',
     video: 'https://www.youtube.com/embed/VIDEO_ID'
   },
   {
     id: 2,
-    title: 'Expense App (Personal)',
-    category: 'Personal',
-    description: 'Hexagonal architecture finance app.',
-    role: 'Fullstack Developer',
+    title: 'title2',
+    category: 'category2',
+    description: 'description2',
+    role: 'role2',
     stack: ['Vue 3', 'Nest', 'Docker'],
-    impact: 'Designed scalable modular architecture.',
+    impact: 'impact2',
     video: null
   },
   {
     id: 3,
-    title: 'Interview Store',
-    category: 'Technical',
-    description: 'Advanced state management simulation.',
-    role: 'Frontend Engineer',
-    stack: ['Vue', 'Pinia'],
-    impact: 'Complex state flow and persistence modeling.',
+    title: 'title3',
+    category: 'category3',
+    description: 'description3',
+    role: 'role3',
+    stack: ['Vue', 'Node', 'Docker'],
+    impact: 'impact3',
+    video: null
+  },
+  {
+    id: 4,
+    title: 'title4',
+    category: 'category4',
+    description: 'description4',
+    role: 'role4',
+    stack: ['React', 'Node', 'Docker'],
+    impact: 'impact4',
     video: null
   }
+   
+  
 ])
 </script>
 
